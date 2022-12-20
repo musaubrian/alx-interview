@@ -8,13 +8,15 @@ def pascal_triangle(n):
     """
     return pascal's triangle
 
-Args::
-    n(int): the starting point of the triangle
+    Args::
+        n(int): the starting point of the triangle
     """
 
     triangle = []
 
-    if n <= 0:
+    if type(n) is not int:
+        raise TypeError(f'[{n}] is not of type int\nUse an int value')
+    elif n <= 0:
         return triangle
     else:
         for i in range(n):
