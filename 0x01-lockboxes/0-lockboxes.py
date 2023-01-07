@@ -17,4 +17,7 @@ def canUnlockAll(boxes):
         if box not in visited_boxes:
             visited_boxes.add(box)
             queue += boxes[box]
-    return len(visited_boxes) == len(boxes)
+    if len(visited_boxes) == len(boxes):
+        return True
+    else:
+        return False
