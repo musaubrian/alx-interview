@@ -8,16 +8,15 @@ def canUnlockAll(boxes):
     Args::
         boxes(list): list of integer lists
     """
-    visited_boxes = set()
-
-    queue = [0]
-
-    while queue:
-        box = queue.pop(0)
-        if box not in visited_boxes:
-            visited_boxes.add(box)
-            queue += boxes[box]
-    if len(visited_boxes) == len(boxes):
-        return True
-    else:
+    if (len(boxes) == 0):
         return False
+
+    for key in range(1, len(boxes) - 1):
+        checked_boxes = False
+        for idx in range(len(boxes)):
+            checked_boxes = key in boxes[idx] and key != idx
+            if checked_boxes:
+                break
+        if checked_boxes is False:
+            return False
+    return True
