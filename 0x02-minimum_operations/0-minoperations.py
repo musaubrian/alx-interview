@@ -17,4 +17,3 @@ def minOperations(n):
         else:
             i = i + 1
     return num
-
