@@ -4,10 +4,9 @@ Try and solve the N Queens problem
 """
 
 import sys
-from typing import List
 
 
-def backtracking(board: List, row=0, column=0):
+def backtracking(board, row=0, column=0):
     """
     method that uses the backtracking algorithm to obtain
     all possible solutions
@@ -30,7 +29,7 @@ def backtracking(board: List, row=0, column=0):
                 board[row][column] = 0
 
 
-def comprobation(board: List, row: int, column: int):
+def comprobation(board, row: int, column: int):
     """
     method that checks if the queen is being attacked,
     vertically or diagonally on both sides
@@ -68,7 +67,7 @@ def comprobation(board: List, row: int, column: int):
     return True
 
 
-def print_result(board: List):
+def print_result(board):
     """
     Method that prints the location of the queen
     through its row and column
