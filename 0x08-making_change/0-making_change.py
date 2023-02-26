@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module returns the fewest number of coins
-needed to meet a given amount total. 
+needed to meet a given amount total.
 """
 
 
@@ -9,6 +9,9 @@ def makeChange(coins, total) -> int:
     """
     Returns the fewest number of coins
     needed to meet a given amount total.
+    Args::
+        coins (List): list of coins
+        total (int)
     """
 
     if total <= 0:
